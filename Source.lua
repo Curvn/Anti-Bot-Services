@@ -6,7 +6,6 @@ game.Players.PlayerAdded:Connect(function(Player)
         Method = "GET"
     })
 	local LC = string.split(Data.Body, ";")
-	print(LC)
 	if table.find(LC, tostring(Player.UserId)) then
 	    print("BOT HAS JOINED: " .. Player.Name .. " | " .. Player.UserId)
 	    SR:FireServer("/mute "..Player.Name, "All")
