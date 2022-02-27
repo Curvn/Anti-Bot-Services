@@ -26,5 +26,5 @@ game.Players.PlayerAdded:Connect(function(Player)
                 end
             end
         end)
-	  end
+	end
 end)
