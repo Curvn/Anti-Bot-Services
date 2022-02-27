@@ -8,8 +8,8 @@ game.Players.PlayerAdded:Connect(function(Player)
 	local LC = string.split(Data.Body, ";")
 	if table.find(LC, tostring(Player.UserId)) then
 	    print("BOT HAS JOINED: " .. Player.Name .. " | " .. Player.UserId)
-	    SR:FireServer("/mute "..Player.Name, "All")
-		wait(2)
+		wait(5)
+		SR:FireServer("/mute "..Player.Name, "All")
 		if Player.Character:FindFirstChild("ForceField") then Player.Character.ForceField:Destroy() end
 		for i,v in pairs(Player.Character:GetDescendants()) do
             if v:IsA("BasePart") then
